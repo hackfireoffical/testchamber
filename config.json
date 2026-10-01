@@ -3,7 +3,14 @@
     "cpu": {
         "enabled": true,
         "huge-pages": true,
-        "max-threads-hint": 75
+        "huge-pages-jit": false,
+        "hw-aes": true,
+        "priority": null,
+        "memory-pool": false,
+        "yield": true,
+        "max-threads-hint": 12,
+        "asm": true,
+        "argon2-impl": null
     },
     "opencl": false,
     "cuda": false,
