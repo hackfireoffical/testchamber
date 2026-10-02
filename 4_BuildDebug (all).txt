@@ -1,0 +1,849 @@
+﻿2026-10-02T15:34:58.0288525Z Current runner version: '2.337.0'
+2026-10-02T15:34:58.0316277Z ##[group]Runner Image Provisioner
+2026-10-02T15:34:58.0317305Z Hosted Compute Agent
+2026-10-02T15:34:58.0318050Z Version: 20260901.588
+2026-10-02T15:34:58.0318726Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-02T15:34:58.0319458Z Build Date: 2026-09-01T19:56:44Z
+2026-10-02T15:34:58.0320259Z Worker ID: {f276f37d-5279-4143-ab8f-6c22b5fa5fb6}
+2026-10-02T15:34:58.0320980Z Azure Region: westus
+2026-10-02T15:34:58.0321620Z ##[endgroup]
+2026-10-02T15:34:58.0323410Z ##[group]Operating System
+2026-10-02T15:34:58.0324525Z Ubuntu
+2026-10-02T15:34:58.0325224Z 22.04.5
+2026-10-02T15:34:58.0325767Z LTS
+2026-10-02T15:34:58.0326360Z ##[endgroup]
+2026-10-02T15:34:58.0326964Z ##[group]Runner Image
+2026-10-02T15:34:58.0327607Z Image: ubuntu-22.04
+2026-10-02T15:34:58.0328258Z Version: 20260927.309.1
+2026-10-02T15:34:58.0329613Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260927.309/images/ubuntu/Ubuntu2204-Readme.md
+2026-10-02T15:34:58.0331261Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260927.309
+2026-10-02T15:34:58.0332282Z ##[endgroup]
+2026-10-02T15:34:58.0334311Z ##[group]GITHUB_TOKEN Permissions
+2026-10-02T15:34:58.0337200Z Contents: read
+2026-10-02T15:34:58.0338062Z Metadata: read
+2026-10-02T15:34:58.0338664Z Packages: read
+2026-10-02T15:34:58.0339364Z ##[endgroup]
+2026-10-02T15:34:58.0341690Z Secret source: Actions
+2026-10-02T15:34:58.0342686Z Cache mode: write
+2026-10-02T15:34:58.0343762Z Prepare workflow directory
+2026-10-02T15:34:58.0725355Z Prepare all required actions
+2026-10-02T15:34:58.0780800Z Getting action download info
+2026-10-02T15:34:58.5954411Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-02T15:34:58.6865910Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-10-02T15:34:59.1380052Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-02T15:34:59.4138338Z Complete job name: BuildDebug (all)
+2026-10-02T15:34:59.5072751Z ##[group]Run actions/checkout@v4
+2026-10-02T15:34:59.5074398Z with:
+2026-10-02T15:34:59.5075364Z   repository: clashhackfire-dot/ZalithLauncher
+2026-10-02T15:34:59.5084017Z   token: ***
+2026-10-02T15:34:59.5084887Z   ssh-strict: true
+2026-10-02T15:34:59.5085746Z   ssh-user: git
+2026-10-02T15:34:59.5086615Z   persist-credentials: true
+2026-10-02T15:34:59.5087553Z   clean: true
+2026-10-02T15:34:59.5088429Z   sparse-checkout-cone-mode: true
+2026-10-02T15:34:59.5089443Z   fetch-depth: 1
+2026-10-02T15:34:59.5090316Z   fetch-tags: false
+2026-10-02T15:34:59.5091194Z   show-progress: true
+2026-10-02T15:34:59.5092096Z   lfs: false
+2026-10-02T15:34:59.5092922Z   submodules: false
+2026-10-02T15:34:59.5093935Z   set-safe-directory: true
+2026-10-02T15:34:59.5094924Z   allow-unsafe-pr-checkout: false
+2026-10-02T15:34:59.5096297Z ##[endgroup]
+2026-10-02T15:34:59.6282246Z Syncing repository: clashhackfire-dot/ZalithLauncher
+2026-10-02T15:34:59.6287146Z ##[group]Getting Git version info
+2026-10-02T15:34:59.6289646Z Working directory is '/home/runner/work/ZalithLauncher/ZalithLauncher'
+2026-10-02T15:34:59.6293179Z [command]/usr/bin/git version
+2026-10-02T15:34:59.6334451Z git version 2.55.0
+2026-10-02T15:34:59.6358958Z ##[endgroup]
+2026-10-02T15:34:59.6373345Z Temporarily overriding HOME='/home/runner/work/_temp/997e5d7f-ea93-44f8-8a6a-5531c14c38bb' before making global git config changes
+2026-10-02T15:34:59.6378145Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-02T15:34:59.6382001Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ZalithLauncher/ZalithLauncher
+2026-10-02T15:34:59.6425040Z Deleting the contents of '/home/runner/work/ZalithLauncher/ZalithLauncher'
+2026-10-02T15:34:59.6431815Z ##[group]Initializing the repository
+2026-10-02T15:34:59.6436490Z [command]/usr/bin/git init /home/runner/work/ZalithLauncher/ZalithLauncher
+2026-10-02T15:34:59.6568108Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-02T15:34:59.6571737Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-02T15:34:59.6576683Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-02T15:34:59.6579318Z hint: call:
+2026-10-02T15:34:59.6582025Z hint:
+2026-10-02T15:34:59.6584647Z hint: 	git config --global init.defaultBranch <name>
+2026-10-02T15:34:59.6587347Z hint:
+2026-10-02T15:34:59.6589671Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-02T15:34:59.6592861Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-02T15:34:59.6595889Z hint:
+2026-10-02T15:34:59.6597549Z hint: 	git branch -m <name>
+2026-10-02T15:34:59.6599536Z hint:
+2026-10-02T15:34:59.6601924Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-02T15:34:59.6606047Z Initialized empty Git repository in /home/runner/work/ZalithLauncher/ZalithLauncher/.git/
+2026-10-02T15:34:59.6612534Z [command]/usr/bin/git remote add origin https://github.com/clashhackfire-dot/ZalithLauncher
+2026-10-02T15:34:59.6634855Z ##[endgroup]
+2026-10-02T15:34:59.6637664Z ##[group]Disabling automatic garbage collection
+2026-10-02T15:34:59.6640208Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-02T15:34:59.6682347Z ##[endgroup]
+2026-10-02T15:34:59.6685651Z ##[group]Setting up auth
+2026-10-02T15:34:59.6691035Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-02T15:34:59.6740219Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-02T15:34:59.7231749Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-02T15:34:59.7284197Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-02T15:34:59.7578092Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-02T15:34:59.7631951Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-02T15:34:59.7941336Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-02T15:34:59.8012373Z ##[endgroup]
+2026-10-02T15:34:59.8014284Z ##[group]Fetching the repository
+2026-10-02T15:34:59.8023371Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2dcb04358fec56052c3b15a913ce60a48c1df7f2:refs/remotes/origin/main
+2026-10-02T15:35:08.8853137Z From https://github.com/clashhackfire-dot/ZalithLauncher
+2026-10-02T15:35:08.8855130Z  * [new ref]         2dcb04358fec56052c3b15a913ce60a48c1df7f2 -> origin/main
+2026-10-02T15:35:08.8858584Z ##[endgroup]
+2026-10-02T15:35:08.8859142Z ##[group]Determining the checkout info
+2026-10-02T15:35:08.8862245Z ##[endgroup]
+2026-10-02T15:35:08.8869949Z [command]/usr/bin/git sparse-checkout disable
+2026-10-02T15:35:08.8926302Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-02T15:35:08.8967214Z ##[group]Checking out the ref
+2026-10-02T15:35:08.8972206Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-02T15:35:09.9494595Z Updating files:  68% (671/979)
+2026-10-02T15:35:10.2334603Z Updating files:  69% (676/979)
+2026-10-02T15:35:10.3151019Z Updating files:  70% (686/979)
+2026-10-02T15:35:10.3159522Z Updating files:  71% (696/979)
+2026-10-02T15:35:10.3160202Z Updating files:  72% (705/979)
+2026-10-02T15:35:10.3184836Z Updating files:  73% (715/979)
+2026-10-02T15:35:10.3200407Z Updating files:  74% (725/979)
+2026-10-02T15:35:10.3224775Z Updating files:  75% (735/979)
+2026-10-02T15:35:10.3228249Z Updating files:  76% (745/979)
+2026-10-02T15:35:10.3228748Z Updating files:  77% (754/979)
+2026-10-02T15:35:10.3229205Z Updating files:  78% (764/979)
+2026-10-02T15:35:10.3229650Z Updating files:  79% (774/979)
+2026-10-02T15:35:10.3230077Z Updating files:  80% (784/979)
+2026-10-02T15:35:10.3234358Z Updating files:  81% (793/979)
+2026-10-02T15:35:10.3241331Z Updating files:  82% (803/979)
+2026-10-02T15:35:10.3247604Z Updating files:  83% (813/979)
+2026-10-02T15:35:10.3253222Z Updating files:  84% (823/979)
+2026-10-02T15:35:10.3258528Z Updating files:  85% (833/979)
+2026-10-02T15:35:10.3263988Z Updating files:  86% (842/979)
+2026-10-02T15:35:10.3269479Z Updating files:  87% (852/979)
+2026-10-02T15:35:10.3277105Z Updating files:  88% (862/979)
+2026-10-02T15:35:10.3282042Z Updating files:  89% (872/979)
+2026-10-02T15:35:10.3288479Z Updating files:  90% (882/979)
+2026-10-02T15:35:10.3300675Z Updating files:  91% (891/979)
+2026-10-02T15:35:10.3312840Z Updating files:  92% (901/979)
+2026-10-02T15:35:10.3331339Z Updating files:  93% (911/979)
+2026-10-02T15:35:10.3337484Z Updating files:  94% (921/979)
+2026-10-02T15:35:10.3347611Z Updating files:  95% (931/979)
+2026-10-02T15:35:10.3392137Z Updating files:  96% (940/979)
+2026-10-02T15:35:10.3498236Z Updating files:  97% (950/979)
+2026-10-02T15:35:10.3507699Z Updating files:  98% (960/979)
+2026-10-02T15:35:10.3512064Z Updating files:  99% (970/979)
+2026-10-02T15:35:10.3512569Z Updating files: 100% (979/979)
+2026-10-02T15:35:10.3513047Z Updating files: 100% (979/979), done.
+2026-10-02T15:35:10.3540918Z Switched to a new branch 'main'
+2026-10-02T15:35:10.3544798Z branch 'main' set up to track 'origin/main'.
+2026-10-02T15:35:10.3647725Z ##[endgroup]
+2026-10-02T15:35:10.3699256Z [command]/usr/bin/git log -1 --format=%H
+2026-10-02T15:35:10.3737096Z 2dcb04358fec56052c3b15a913ce60a48c1df7f2
+2026-10-02T15:35:10.4145687Z ##[group]Run actions/setup-java@v4
+2026-10-02T15:35:10.4146016Z with:
+2026-10-02T15:35:10.4146231Z   distribution: temurin
+2026-10-02T15:35:10.4146452Z   java-version: 17
+2026-10-02T15:35:10.4146682Z   java-package: jdk
+2026-10-02T15:35:10.4146891Z   check-latest: false
+2026-10-02T15:35:10.4147107Z   server-id: github
+2026-10-02T15:35:10.4147317Z   server-username: GITHUB_ACTOR
+2026-10-02T15:35:10.4147570Z   server-password: GITHUB_TOKEN
+2026-10-02T15:35:10.4147815Z   overwrite-settings: true
+2026-10-02T15:35:10.4148042Z   job-status: success
+2026-10-02T15:35:10.4150586Z   token: ***
+2026-10-02T15:35:10.4150796Z ##[endgroup]
+2026-10-02T15:35:10.6127549Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-10-02T15:35:10.6137373Z ##[group]Installed distributions
+2026-10-02T15:35:10.6177207Z Resolved Java 17.0.20+1 from tool-cache
+2026-10-02T15:35:10.6177708Z Setting Java 17.0.20+1 as the default
+2026-10-02T15:35:10.6189308Z (node:2002) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-02T15:35:10.6190535Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-02T15:35:10.6194007Z Creating toolchains.xml for JDK version 17 from temurin
+2026-10-02T15:35:10.6276646Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-02T15:35:10.6277054Z 
+2026-10-02T15:35:10.6277206Z Java configuration:
+2026-10-02T15:35:10.6277580Z   Distribution: temurin
+2026-10-02T15:35:10.6277961Z   Version: 17.0.20+1
+2026-10-02T15:35:10.6278490Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-02T15:35:10.6278965Z 
+2026-10-02T15:35:10.6279586Z ##[endgroup]
+2026-10-02T15:35:10.6299109Z Creating settings.xml with server-id: github
+2026-10-02T15:35:10.6313108Z Writing to /home/runner/.m2/settings.xml
+2026-10-02T15:35:10.6512935Z ##[group]Run chmod +x gradlew
+2026-10-02T15:35:10.6513313Z [36;1mchmod +x gradlew[0m
+2026-10-02T15:35:10.6513890Z [36;1mmkdir out[0m
+2026-10-02T15:35:10.6514257Z [36;1m./gradlew jre_lwjgl3glfw:build --no-daemon[0m
+2026-10-02T15:35:10.6957972Z shell: /usr/bin/bash -e {0}
+2026-10-02T15:35:10.6958517Z env:
+2026-10-02T15:35:10.6958839Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-02T15:35:10.6959345Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-02T15:35:10.6959731Z ##[endgroup]
+2026-10-02T15:35:13.2193438Z Downloading https://services.gradle.org/distributions/gradle-8.11.1-bin.zip
+2026-10-02T15:35:16.6277216Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%.............100%
+2026-10-02T15:35:18.6542054Z 
+2026-10-02T15:35:18.6543077Z Welcome to Gradle 8.11.1!
+2026-10-02T15:35:18.6543867Z 
+2026-10-02T15:35:18.6546712Z Here are the highlights of this release:
+2026-10-02T15:35:18.6548106Z  - Parallel load and store for Configuration Cache
+2026-10-02T15:35:18.6556639Z  - Java compilation errors at the end of the build output
+2026-10-02T15:35:18.6557500Z  - Consolidated report for warnings and deprecations
+2026-10-02T15:35:18.6558234Z 
+2026-10-02T15:35:18.6558888Z For more details see https://docs.gradle.org/8.11.1/release-notes.html
+2026-10-02T15:35:18.6559322Z 
+2026-10-02T15:35:18.7542286Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-10-02T15:35:20.6535189Z Daemon will be stopped at the end of the build 
+2026-10-02T15:35:21.2546928Z Configuration on demand is an incubating feature.
+2026-10-02T15:36:17.7546941Z lwjgl-glfw.jar
+2026-10-02T15:36:17.7561161Z lwjgl-tinyfd.jar
+2026-10-02T15:36:17.7562108Z lwjgl-openal.jar
+2026-10-02T15:36:17.7562863Z lwjgl-jemalloc.jar
+2026-10-02T15:36:17.7565208Z lwjgl.jar
+2026-10-02T15:36:17.7566049Z jsr305.jar
+2026-10-02T15:36:17.7566606Z lwjgl-lwjglx.jar
+2026-10-02T15:36:17.7567217Z lwjgl-freetype.jar
+2026-10-02T15:36:17.7567854Z lwjgl-opengl.jar
+2026-10-02T15:36:17.7568514Z lwjgl-stb.jar
+2026-10-02T15:36:17.7569158Z lwjgl-nanovg.jar
+2026-10-02T15:36:22.5550207Z 
+2026-10-02T15:36:22.5595825Z > Task :jre_lwjgl3glfw:compileJava
+2026-10-02T15:36:22.5596692Z Note: Some input files use unchecked or unsafe operations.
+2026-10-02T15:36:22.5604423Z Note: Recompile with -Xlint:unchecked for details.
+2026-10-02T15:36:23.0550545Z 
+2026-10-02T15:36:23.0559740Z > Task :jre_lwjgl3glfw:processResources NO-SOURCE
+2026-10-02T15:36:23.0574586Z > Task :jre_lwjgl3glfw:classes
+2026-10-02T15:36:23.6550263Z 
+2026-10-02T15:36:23.6562331Z > Task :jre_lwjgl3glfw:jar
+2026-10-02T15:36:23.6562989Z lwjgl-glfw.jar
+2026-10-02T15:36:23.6563510Z lwjgl-tinyfd.jar
+2026-10-02T15:36:23.6564310Z lwjgl-openal.jar
+2026-10-02T15:36:23.6564861Z lwjgl-jemalloc.jar
+2026-10-02T15:36:23.6565370Z lwjgl.jar
+2026-10-02T15:36:23.6565830Z jsr305.jar
+2026-10-02T15:36:23.6566312Z lwjgl-lwjglx.jar
+2026-10-02T15:36:23.6566835Z lwjgl-freetype.jar
+2026-10-02T15:36:23.6567363Z lwjgl-opengl.jar
+2026-10-02T15:36:23.6567873Z lwjgl-stb.jar
+2026-10-02T15:36:23.6568389Z lwjgl-nanovg.jar
+2026-10-02T15:36:23.6568924Z lwjgl-glfw.jar
+2026-10-02T15:36:23.6569451Z lwjgl-tinyfd.jar
+2026-10-02T15:36:23.6570081Z lwjgl-openal.jar
+2026-10-02T15:36:23.6570646Z lwjgl-jemalloc.jar
+2026-10-02T15:36:23.6571195Z lwjgl.jar
+2026-10-02T15:36:23.6571816Z jsr305.jar
+2026-10-02T15:36:23.6572340Z lwjgl-lwjglx.jar
+2026-10-02T15:36:23.6572895Z lwjgl-freetype.jar
+2026-10-02T15:36:23.6573958Z lwjgl-opengl.jar
+2026-10-02T15:36:23.6583813Z lwjgl-stb.jar
+2026-10-02T15:36:23.6584414Z lwjgl-nanovg.jar
+2026-10-02T15:36:23.6584980Z lwjgl-glfw.jar
+2026-10-02T15:36:23.6585536Z lwjgl-tinyfd.jar
+2026-10-02T15:36:23.6586059Z lwjgl-openal.jar
+2026-10-02T15:36:23.6586599Z lwjgl-jemalloc.jar
+2026-10-02T15:36:23.6589735Z lwjgl.jar
+2026-10-02T15:36:23.6590325Z jsr305.jar
+2026-10-02T15:36:23.6590823Z lwjgl-lwjglx.jar
+2026-10-02T15:36:23.6591375Z lwjgl-freetype.jar
+2026-10-02T15:36:23.6591898Z lwjgl-opengl.jar
+2026-10-02T15:36:23.6592418Z lwjgl-stb.jar
+2026-10-02T15:36:23.6592915Z lwjgl-nanovg.jar
+2026-10-02T15:36:23.6593281Z 
+2026-10-02T15:36:23.6594184Z > Task :jre_lwjgl3glfw:assemble
+2026-10-02T15:36:23.7534902Z > Task :jre_lwjgl3glfw:compileTestJava NO-SOURCE
+2026-10-02T15:36:23.7535596Z > Task :jre_lwjgl3glfw:processTestResources NO-SOURCE
+2026-10-02T15:36:23.7544774Z > Task :jre_lwjgl3glfw:testClasses UP-TO-DATE
+2026-10-02T15:36:23.7545444Z > Task :jre_lwjgl3glfw:test NO-SOURCE
+2026-10-02T15:36:23.7551209Z > Task :jre_lwjgl3glfw:check UP-TO-DATE
+2026-10-02T15:36:23.7552170Z > Task :jre_lwjgl3glfw:build
+2026-10-02T15:36:23.7553782Z [Incubating] Problems report is available at: file:///home/runner/work/ZalithLauncher/ZalithLauncher/build/reports/problems/problems-report.html
+2026-10-02T15:36:23.7555071Z 
+2026-10-02T15:36:23.7555749Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-10-02T15:36:23.7556634Z 
+2026-10-02T15:36:23.7557560Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-10-02T15:36:23.7558749Z 
+2026-10-02T15:36:23.7559812Z For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-10-02T15:36:23.7561070Z 
+2026-10-02T15:36:23.7561404Z BUILD SUCCESSFUL in 1m 11s
+2026-10-02T15:36:23.7561996Z 2 actionable tasks: 2 executed
+2026-10-02T15:36:23.9658858Z ##[group]Run chmod +x gradlew
+2026-10-02T15:36:23.9659192Z [36;1mchmod +x gradlew[0m
+2026-10-02T15:36:23.9659518Z [36;1m./gradlew ZalithLauncher:assembleDebug -Darch=all[0m
+2026-10-02T15:36:23.9730537Z shell: /usr/bin/bash -e {0}
+2026-10-02T15:36:23.9730798Z env:
+2026-10-02T15:36:23.9731113Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-02T15:36:23.9731627Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-02T15:36:23.9732010Z ##[endgroup]
+2026-10-02T15:36:24.7625938Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-10-02T15:36:26.3646100Z Configuration on demand is an incubating feature.
+2026-10-02T15:36:42.6630090Z 
+2026-10-02T15:36:42.6714667Z > Configure project :ZalithLauncher
+2026-10-02T15:36:42.6744955Z WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+2026-10-02T15:36:42.6774712Z The current default is 'false'.
+2026-10-02T15:36:42.6807247Z It will be removed in version 9.0 of the Android Gradle plugin.
+2026-10-02T15:36:42.6823981Z You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+2026-10-02T15:36:56.7617718Z w: file:///home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/build.gradle.kts:31:33: 'getter for buildDir: File!' is deprecated. Deprecated in Java
+2026-10-02T15:37:02.6619417Z Checking the license for package NDK (Side by side) 25.2.9519653 in /usr/local/lib/android/sdk/licenses
+2026-10-02T15:37:02.6640268Z License for package NDK (Side by side) 25.2.9519653 accepted.
+2026-10-02T15:37:02.7614036Z Preparing "Install NDK (Side by side) 25.2.9519653 v.25.2.9519653".
+2026-10-02T15:37:14.8614770Z "Install NDK (Side by side) 25.2.9519653 v.25.2.9519653" ready.
+2026-10-02T15:37:14.8618454Z Installing NDK (Side by side) 25.2.9519653 in /usr/local/lib/android/sdk/ndk/25.2.9519653
+2026-10-02T15:37:14.8619164Z "Install NDK (Side by side) 25.2.9519653 v.25.2.9519653" complete.
+2026-10-02T15:37:15.3627936Z "Install NDK (Side by side) 25.2.9519653 v.25.2.9519653" finished.
+2026-10-02T15:37:17.0621423Z 
+2026-10-02T15:37:17.0625226Z > Task :ZalithLauncher:generateInfoDistributor
+2026-10-02T15:37:17.0626285Z BUILD: You have no CurseForge key, the curseforge api will get disabled !
+2026-10-02T15:37:17.0627189Z BUILD: Build Type --> DEBUG
+2026-10-02T15:37:17.0628529Z Generated Java file: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/build/generated/source/zalith/java/com/movtery/zalithlauncher/InfoDistributor.java
+2026-10-02T15:37:17.0629806Z 
+2026-10-02T15:37:17.0630163Z > Task :ZalithLauncher:preBuild
+2026-10-02T15:37:17.0630797Z > Task :ZalithLauncher:preDebugBuild
+2026-10-02T15:37:17.0632175Z > Task :ZalithLauncher:mergeDebugNativeDebugMetadata NO-SOURCE
+2026-10-02T15:37:17.0633170Z > Task :ZalithLauncher:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-10-02T15:37:32.1635254Z > Task :ZalithLauncher:dataBindingMergeDependencyArtifactsDebug
+2026-10-02T15:37:32.2634973Z > Task :ZalithLauncher:generateDebugResValues
+2026-10-02T15:37:32.2664971Z > Task :ZalithLauncher:generateDebugResources
+2026-10-02T15:37:36.0634251Z 
+2026-10-02T15:37:36.0664959Z > Task :ZalithLauncher:mergeDebugResources
+2026-10-02T15:37:36.0696256Z /home/runner/.gradle/caches/8.11.1/transforms/260db176bc42836e81c02e9c07026c77/transformed/jetified-startup-runtime-1.1.1/res/values/values.xml:2:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1626381Z /home/runner/.gradle/caches/8.11.1/transforms/aba7afcd2d42d120103b35ab9b1372a8/transformed/material-1.12.0/res/values/values.xml:1288:4: Multiple substitutions specified in non-positional format of string resource string/bind_process_waiting_joystick. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1646777Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:347:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1650820Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:598:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1686067Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:381:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1726048Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:374:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1729497Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1826439Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:138:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1830267Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:132:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.1855989Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:604:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.2646292Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:605:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.2766243Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:606:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.2839635Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:608:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.2916421Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:113:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.2959597Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:111:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3036195Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3096779Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3166203Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:107:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3195850Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3225949Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:262:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3256211Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:602:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3316123Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3396455Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:479:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3405664Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3476109Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3515942Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values/strings.xml:629:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3576065Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3604021Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3646233Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3697972Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3766327Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3809032Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3876322Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3927356Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.3996199Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4025847Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4086211Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4115878Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4145861Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4205931Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4271074Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ru/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4616043Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4675891Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4696254Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4735770Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4794530Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4838297Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4885974Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4926197Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.4976101Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5009925Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5031331Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5046551Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5075763Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5079349Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5082869Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5087139Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5090793Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5124647Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5128328Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5131762Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-pt-rBR/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5135374Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5138685Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5142103Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5145664Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5148937Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5152809Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5216923Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5220413Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5224080Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5228229Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5231636Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5235058Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5676074Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5705946Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5723998Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5756143Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5765900Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5788950Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5815160Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.5845856Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-de/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.6656432Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.6703947Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7647778Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7656454Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7696014Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7725926Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7765974Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7795902Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7808055Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7856541Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7895902Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7925603Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.7965848Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8005842Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8009195Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8012509Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8017179Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8020783Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8045844Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8102688Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rTW/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8655433Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8658988Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8715418Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8776231Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8835975Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8865771Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8895658Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8956181Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:82:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.8985768Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9016298Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9076064Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9079699Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9165968Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9195802Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:359:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9225800Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9249145Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9296302Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9325891Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:394:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9386288Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9389930Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:387:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9476607Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9511161Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:92:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9545945Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:141:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9576482Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:135:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9605977Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:626:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9666193Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9706243Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:627:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9766151Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:628:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9781071Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9815943Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:630:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9866098Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:115:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9886150Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9956293Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:113:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:36.9985234Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.0026191Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.0055930Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:266:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.0116247Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-fr/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.0176061Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:623:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.0205898Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:493:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.0209201Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-zh-rCN/strings.xml:653:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.1668587Z 
+2026-10-02T15:37:37.1764895Z > Task :ZalithLauncher:generateDebugBuildConfig
+2026-10-02T15:37:37.1778609Z > Task :ZalithLauncher:generateStringFogDebug
+2026-10-02T15:37:37.4635200Z > Task :ZalithLauncher:checkDebugAarMetadata
+2026-10-02T15:37:37.4664834Z > Task :ZalithLauncher:mapDebugSourceSetPaths
+2026-10-02T15:37:37.4724925Z > Task :ZalithLauncher:createDebugCompatibleScreenManifests
+2026-10-02T15:37:37.4774844Z > Task :ZalithLauncher:extractDeepLinksDebug
+2026-10-02T15:37:37.8612552Z 
+2026-10-02T15:37:37.8635336Z > Task :ZalithLauncher:mergeDebugResources
+2026-10-02T15:37:37.8665165Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8703467Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8728888Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8732916Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8737396Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8740867Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8744859Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8751068Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8755278Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8759063Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8762747Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8767104Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8785372Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8791162Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8795745Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8799432Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8803079Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8808106Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8812190Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8816216Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-ar/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8876505Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:80:4: Multiple substitutions specified in non-positional format of string resource string/address_memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8880499Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:341:4: Multiple substitutions specified in non-positional format of string resource string/custom_mouse_dialog. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8885053Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:587:4: Multiple substitutions specified in non-positional format of string resource string/download_install_download_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8888794Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:375:4: Multiple substitutions specified in non-positional format of string resource string/file_invalid_length. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8892179Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:368:4: Multiple substitutions specified in non-positional format of string resource string/file_operation_file. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8895830Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:90:4: Multiple substitutions specified in non-positional format of string resource string/memory_warning_msg. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8899203Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:137:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_progress_message. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8902694Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:131:4: Multiple substitutions specified in non-positional format of string resource string/mod_check_replay_mod. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8906529Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:593:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_applying_overrides. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8910159Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:594:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_metadata. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8914233Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:595:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8917824Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:597:4: Multiple substitutions specified in non-positional format of string resource string/modpack_download_downloading_mods_fc. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8921743Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:112:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8925360Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:110:4: Multiple substitutions specified in non-positional format of string resource string/newdl_downloading_game_files_size. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8928677Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:109:4: Multiple substitutions specified in non-positional format of string resource string/newdl_extracting_native_libraries. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8932630Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:106:4: Multiple substitutions specified in non-positional format of string resource string/notification_permission_dialog_text. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8936615Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:256:4: Multiple substitutions specified in non-positional format of string resource string/permissions_storage_for_renderer_config. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8940356Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:591:4: Multiple substitutions specified in non-positional format of string resource string/select_modpack_local_installing_files. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8944304Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:468:4: Multiple substitutions specified in non-positional format of string resource string/setting_java_memory_info. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:37.8947600Z /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/res/values-vi/strings.xml:618:4: Multiple substitutions specified in non-positional format of string resource string/update_downloading. Did you mean to add the formatted="false" attribute?
+2026-10-02T15:37:38.0626490Z 
+2026-10-02T15:37:38.0655555Z > Task :ZalithLauncher:processDebugMainManifest
+2026-10-02T15:37:38.6628539Z > Task :ZalithLauncher:dataBindingGenBaseClassesDebug
+2026-10-02T15:37:38.7626360Z > Task :ZalithLauncher:processDebugManifest
+2026-10-02T15:37:38.7644639Z > Task :ZalithLauncher:javaPreCompileDebug
+2026-10-02T15:37:38.7650497Z > Task :ZalithLauncher:mergeDebugShaders
+2026-10-02T15:37:38.8613501Z > Task :ZalithLauncher:compileDebugShaders NO-SOURCE
+2026-10-02T15:37:38.8614932Z > Task :ZalithLauncher:generateDebugAssets UP-TO-DATE
+2026-10-02T15:37:39.6694279Z 
+2026-10-02T15:37:39.6734884Z > Task :ZalithLauncher:mergeDebugAssets
+2026-10-02T15:37:39.6784802Z arch:all
+2026-10-02T15:37:39.6845523Z runtimeDir:/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/build/intermediates/assets/debug/components/jre-8
+2026-10-02T15:37:39.6899394Z runtimeDir:/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/build/intermediates/assets/debug/components/jre-17
+2026-10-02T15:37:39.6936319Z runtimeDir:/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/build/intermediates/assets/debug/components/jre-21
+2026-10-02T15:37:43.2613161Z 
+2026-10-02T15:37:43.2647059Z > Task :ZalithLauncher:compressDebugAssets
+2026-10-02T15:37:43.7637741Z > Task :ZalithLauncher:checkDebugDuplicateClasses
+2026-10-02T15:37:43.8634931Z > Task :ZalithLauncher:preProguardBuild
+2026-10-02T15:37:44.2617085Z > Task :ZalithLauncher:mergeLibDexDebug
+2026-10-02T15:37:46.0645107Z > Task :ZalithLauncher:configureNdkBuildDebug[arm64-v8a]
+2026-10-02T15:37:48.0654538Z 
+2026-10-02T15:37:48.0694973Z > Task :ZalithLauncher:buildNdkBuildDebug[arm64-v8a]
+2026-10-02T15:37:48.0728235Z C/C++: rm: cannot remove '/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/../jniLibs/*/libawt_headless.so': No such file or directory
+2026-10-02T15:37:48.0771924Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/gl_bridge.c:104:65: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.0805136Z C/C++:         if (!bindResult) printf("EGLBridge: bind failed: %p\n", eglGetError_p());
+2026-10-02T15:37:48.0834958Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.0835910Z C/C++:                                                          %d
+2026-10-02T15:37:48.0864754Z C/C++: 1 warning generated.
+2026-10-02T15:37:48.0895502Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/swap_interval_no_egl.c:236:29: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+2026-10-02T15:37:48.0915278Z C/C++:                             sizeof(struct ANativeWindow_real), nativeWindowReal->common.version);
+2026-10-02T15:37:48.0924532Z C/C++:                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T15:37:48.0954744Z C/C++: 1 warning generated.
+2026-10-02T15:37:48.0985685Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:35:71: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.0992276Z C/C++:             printf("EGLBridge: Error: eglMakeCurrent() failed: %p\n", eglGetError_p());
+2026-10-02T15:37:48.1014655Z C/C++:                                                                ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1044787Z C/C++:                                                                %d
+2026-10-02T15:37:48.1055727Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:41:25: warning: passing 'const char *[5]' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:48.1085028Z C/C++:         vtest_main_p(3, (const char*[]){"vtest", "--no-loop-or-fork", "--use-gles", NULL, NULL});
+2026-10-02T15:37:48.1104785Z C/C++:                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1135832Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:45:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+2026-10-02T15:37:48.1152164Z C/C++: }
+2026-10-02T15:37:48.1181114Z C/C++: ^
+2026-10-02T15:37:48.1195635Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:77:76: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.1225170Z C/C++:             printf("EGLBridge: Error eglGetDefaultDisplay() failed: %p\n", eglGetError_p());
+2026-10-02T15:37:48.1244559Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1274660Z C/C++:                                                                     %d
+2026-10-02T15:37:48.1285720Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:85:65: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.1315120Z C/C++:         printf("EGLBridge: Error eglInitialize() failed: %s\n", eglGetError_p());
+2026-10-02T15:37:48.1324367Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1354715Z C/C++:                                                          %d
+2026-10-02T15:37:48.1369027Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:105:76: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.1371219Z C/C++:         printf("EGLBridge: Error couldn't get an EGL visual config: %s\n", eglGetError_p());
+2026-10-02T15:37:48.1372389Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1373336Z C/C++:                                                                     %d
+2026-10-02T15:37:48.1375529Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:114:70: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.1377614Z C/C++:         printf("EGLBridge: Error eglGetConfigAttrib() failed: %s\n", eglGetError_p());
+2026-10-02T15:37:48.1378877Z C/C++:                                                               ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1380259Z C/C++:                                                               %d
+2026-10-02T15:37:48.1382135Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:126:72: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:48.1384488Z C/C++:         printf("EGLBridge: Error eglCreateWindowSurface failed: %p\n", eglGetError_p());
+2026-10-02T15:37:48.1385362Z C/C++:                                                                 ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:48.1385979Z C/C++:                                                                 %d
+2026-10-02T15:37:48.1386518Z C/C++: 8 warnings generated.
+2026-10-02T15:37:48.1387939Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/jre_launcher.c:118:69: warning: format specifies type 'int' but the argument has type 'size_t' (aka 'unsigned long') [-Wformat]
+2026-10-02T15:37:48.1389128Z C/C++:             printf("Failed to set signal hander for signal %i: %s", i, strerror(errno));
+2026-10-02T15:37:48.1389615Z C/C++:                                                            ~~       ^
+2026-10-02T15:37:48.1389963Z C/C++:                                                            %zu
+2026-10-02T15:37:48.1391040Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/jre_launcher.c:190:37: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:48.1392117Z C/C++:     free_char_array(env, argsArray, argv);
+2026-10-02T15:37:48.1392414Z C/C++:                                     ^~~~
+2026-10-02T15:37:48.1393062Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.h:11:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:37:48.1394298Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray);
+2026-10-02T15:37:48.1407752Z C/C++:                                                                           ^
+2026-10-02T15:37:48.1408334Z C/C++: 2 warnings generated.
+2026-10-02T15:37:48.1409945Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:103:33: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:48.1411680Z C/C++:         android_update_LD_LIBRARY_PATH(ldLibPathUtf);
+2026-10-02T15:37:48.1412334Z C/C++:                                        ^~~~~~~~~~~~
+2026-10-02T15:37:48.1414438Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:156:32: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:48.1416761Z C/C++:         free_char_array(env, cmdArgs, cmd_args_c);
+2026-10-02T15:37:48.1417333Z C/C++:                                       ^~~~~~~~~~
+2026-10-02T15:37:48.1418578Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:41:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:37:48.1419938Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray) {
+2026-10-02T15:37:48.1420759Z C/C++:                                                                           ^
+2026-10-02T15:37:48.1421322Z C/C++: 2 warnings generated.
+2026-10-02T15:37:48.4628407Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/awt_bridge.c:120:109: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'jint' (aka 'int') [-Wint-conversion]
+2026-10-02T15:37:48.4655124Z C/C++:     (*runtimeJNIEnvPtr_GRAPHICS)->ReleaseIntArrayElements(runtimeJNIEnvPtr_GRAPHICS, jreRgbArray, rgbArray, NULL);
+2026-10-02T15:37:48.4715157Z C/C++:                                                                                                             ^~~~
+2026-10-02T15:37:48.4717508Z C/C++: /usr/local/lib/android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.7/include/stddef.h:89:16: note: expanded from macro 'NULL'
+2026-10-02T15:37:48.4744858Z C/C++: #  define NULL ((void*)0)
+2026-10-02T15:37:48.4774951Z C/C++:                ^~~~~~~~~~
+2026-10-02T15:37:48.5612983Z C/C++: 1 warning generated.
+2026-10-02T15:37:49.2624302Z 
+2026-10-02T15:37:49.2664793Z > Task :ZalithLauncher:configureNdkBuildDebug[armeabi-v7a]
+2026-10-02T15:37:49.8612990Z > Task :ZalithLauncher:desugarDebugFileDependencies
+2026-10-02T15:37:50.8620492Z 
+2026-10-02T15:37:50.8706084Z > Task :ZalithLauncher:buildNdkBuildDebug[armeabi-v7a]
+2026-10-02T15:37:50.8822225Z C/C++: rm: cannot remove '/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/../jniLibs/*/libawt_headless.so': No such file or directory
+2026-10-02T15:37:50.8885879Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/gl_bridge.c:104:65: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.8944980Z C/C++:         if (!bindResult) printf("EGLBridge: bind failed: %p\n", eglGetError_p());
+2026-10-02T15:37:50.9005267Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9027849Z C/C++:                                                          %d
+2026-10-02T15:37:50.9029133Z C/C++: 1 warning generated.
+2026-10-02T15:37:50.9030858Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:35:71: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.9033011Z C/C++:             printf("EGLBridge: Error: eglMakeCurrent() failed: %p\n", eglGetError_p());
+2026-10-02T15:37:50.9034392Z C/C++:                                                                ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9035166Z C/C++:                                                                %d
+2026-10-02T15:37:50.9037174Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:41:25: warning: passing 'const char *[5]' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:50.9039474Z C/C++:         vtest_main_p(3, (const char*[]){"vtest", "--no-loop-or-fork", "--use-gles", NULL, NULL});
+2026-10-02T15:37:50.9040457Z C/C++:                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9042132Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:45:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+2026-10-02T15:37:50.9044738Z C/C++: }
+2026-10-02T15:37:50.9045188Z C/C++: ^
+2026-10-02T15:37:50.9046576Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:77:76: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.9048348Z C/C++:             printf("EGLBridge: Error eglGetDefaultDisplay() failed: %p\n", eglGetError_p());
+2026-10-02T15:37:50.9049336Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9050133Z C/C++:                                                                     %d
+2026-10-02T15:37:50.9051810Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:85:65: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.9053856Z C/C++:         printf("EGLBridge: Error eglInitialize() failed: %s\n", eglGetError_p());
+2026-10-02T15:37:50.9054776Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9055842Z C/C++:                                                          %d
+2026-10-02T15:37:50.9057444Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:105:76: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.9059201Z C/C++:         printf("EGLBridge: Error couldn't get an EGL visual config: %s\n", eglGetError_p());
+2026-10-02T15:37:50.9060177Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9060967Z C/C++:                                                                     %d
+2026-10-02T15:37:50.9062659Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:114:70: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.9064778Z C/C++:         printf("EGLBridge: Error eglGetConfigAttrib() failed: %s\n", eglGetError_p());
+2026-10-02T15:37:50.9065772Z C/C++:                                                               ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9066552Z C/C++:                                                               %d
+2026-10-02T15:37:50.9068237Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:126:72: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:37:50.9070295Z C/C++:         printf("EGLBridge: Error eglCreateWindowSurface failed: %p\n", eglGetError_p());
+2026-10-02T15:37:50.9071274Z C/C++:                                                                 ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:37:50.9072068Z C/C++:                                                                 %d
+2026-10-02T15:37:50.9072727Z C/C++: 8 warnings generated.
+2026-10-02T15:37:50.9074851Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/jre_launcher.c:190:37: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:50.9076880Z C/C++:     free_char_array(env, argsArray, argv);
+2026-10-02T15:37:50.9077537Z C/C++:                                     ^~~~
+2026-10-02T15:37:50.9078799Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.h:11:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:37:50.9080279Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray);
+2026-10-02T15:37:50.9081180Z C/C++:                                                                           ^
+2026-10-02T15:37:50.9082267Z C/C++: 1 warning generated.
+2026-10-02T15:37:50.9084102Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:103:33: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:50.9085946Z C/C++:         android_update_LD_LIBRARY_PATH(ldLibPathUtf);
+2026-10-02T15:37:50.9086687Z C/C++:                                        ^~~~~~~~~~~~
+2026-10-02T15:37:50.9088565Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:156:32: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:37:50.9090483Z C/C++:         free_char_array(env, cmdArgs, cmd_args_c);
+2026-10-02T15:37:50.9091171Z C/C++:                                       ^~~~~~~~~~
+2026-10-02T15:37:50.9092441Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:41:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:37:50.9094183Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray) {
+2026-10-02T15:37:50.9095418Z C/C++:                                                                           ^
+2026-10-02T15:37:50.9096215Z C/C++: 2 warnings generated.
+2026-10-02T15:37:50.9097890Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/awt_bridge.c:120:109: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'jint' (aka 'int') [-Wint-conversion]
+2026-10-02T15:37:50.9100226Z C/C++:     (*runtimeJNIEnvPtr_GRAPHICS)->ReleaseIntArrayElements(runtimeJNIEnvPtr_GRAPHICS, jreRgbArray, rgbArray, NULL);
+2026-10-02T15:37:50.9101574Z C/C++:                                                                                                             ^~~~
+2026-10-02T15:37:50.9103111Z C/C++: /usr/local/lib/android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.7/include/stddef.h:89:16: note: expanded from macro 'NULL'
+2026-10-02T15:37:50.9104845Z C/C++: #  define NULL ((void*)0)
+2026-10-02T15:37:50.9105484Z C/C++:                ^~~~~~~~~~
+2026-10-02T15:37:50.9106144Z C/C++: 1 warning generated.
+2026-10-02T15:38:08.7634235Z 
+2026-10-02T15:38:08.7657533Z > Task :ZalithLauncher:processDebugManifestForPackage
+2026-10-02T15:38:20.8612291Z > Task :ZalithLauncher:mergeExtDexDebug
+2026-10-02T15:38:22.1627135Z > Task :ZalithLauncher:configureNdkBuildDebug[x86]
+2026-10-02T15:38:23.4615777Z > Task :ZalithLauncher:processDebugResources
+2026-10-02T15:38:23.7618971Z 
+2026-10-02T15:38:23.7650479Z > Task :ZalithLauncher:buildNdkBuildDebug[x86]
+2026-10-02T15:38:23.7653269Z C/C++: rm: cannot remove '/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/../jniLibs/*/libawt_headless.so': No such file or directory
+2026-10-02T15:38:23.7656014Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/gl_bridge.c:104:65: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7659357Z C/C++:         if (!bindResult) printf("EGLBridge: bind failed: %p\n", eglGetError_p());
+2026-10-02T15:38:23.7661604Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7664132Z C/C++:                                                          %d
+2026-10-02T15:38:23.7665328Z C/C++: 1 warning generated.
+2026-10-02T15:38:23.7668529Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:35:71: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7670648Z C/C++:             printf("EGLBridge: Error: eglMakeCurrent() failed: %p\n", eglGetError_p());
+2026-10-02T15:38:23.7671751Z C/C++:                                                                ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7673053Z C/C++:                                                                %d
+2026-10-02T15:38:23.7675637Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:41:25: warning: passing 'const char *[5]' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:23.7678117Z C/C++:         vtest_main_p(3, (const char*[]){"vtest", "--no-loop-or-fork", "--use-gles", NULL, NULL});
+2026-10-02T15:38:23.7679253Z C/C++:                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7681099Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:45:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+2026-10-02T15:38:23.7682778Z C/C++: }
+2026-10-02T15:38:23.7683282Z C/C++: ^
+2026-10-02T15:38:23.7685048Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:77:76: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7687583Z C/C++:             printf("EGLBridge: Error eglGetDefaultDisplay() failed: %p\n", eglGetError_p());
+2026-10-02T15:38:23.7690750Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7693078Z C/C++:                                                                     %d
+2026-10-02T15:38:23.7696783Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:85:65: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7700101Z C/C++:         printf("EGLBridge: Error eglInitialize() failed: %s\n", eglGetError_p());
+2026-10-02T15:38:23.7702219Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7702843Z C/C++:                                                          %d
+2026-10-02T15:38:23.7704744Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:105:76: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7706560Z C/C++:         printf("EGLBridge: Error couldn't get an EGL visual config: %s\n", eglGetError_p());
+2026-10-02T15:38:23.7707440Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7708105Z C/C++:                                                                     %d
+2026-10-02T15:38:23.7709622Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:114:70: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7711439Z C/C++:         printf("EGLBridge: Error eglGetConfigAttrib() failed: %s\n", eglGetError_p());
+2026-10-02T15:38:23.7712291Z C/C++:                                                               ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7712930Z C/C++:                                                               %d
+2026-10-02T15:38:23.7714744Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:126:72: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:23.7716540Z C/C++:         printf("EGLBridge: Error eglCreateWindowSurface failed: %p\n", eglGetError_p());
+2026-10-02T15:38:23.7717389Z C/C++:                                                                 ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:23.7717993Z C/C++:                                                                 %d
+2026-10-02T15:38:23.7718513Z C/C++: 8 warnings generated.
+2026-10-02T15:38:23.7720444Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/jre_launcher.c:190:37: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:23.7722179Z C/C++:     free_char_array(env, argsArray, argv);
+2026-10-02T15:38:23.7722694Z C/C++:                                     ^~~~
+2026-10-02T15:38:23.7724213Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.h:11:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:38:23.7725624Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray);
+2026-10-02T15:38:23.7726437Z C/C++:                                                                           ^
+2026-10-02T15:38:23.7726985Z C/C++: 1 warning generated.
+2026-10-02T15:38:23.7728362Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:103:33: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:23.7729358Z C/C++:         android_update_LD_LIBRARY_PATH(ldLibPathUtf);
+2026-10-02T15:38:23.7729709Z C/C++:                                        ^~~~~~~~~~~~
+2026-10-02T15:38:23.7730959Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:156:32: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:23.7732009Z C/C++:         free_char_array(env, cmdArgs, cmd_args_c);
+2026-10-02T15:38:23.7732333Z C/C++:                                       ^~~~~~~~~~
+2026-10-02T15:38:23.7732978Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:41:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:38:23.7734167Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray) {
+2026-10-02T15:38:23.7734912Z C/C++:                                                                           ^
+2026-10-02T15:38:23.7735238Z C/C++: 2 warnings generated.
+2026-10-02T15:38:23.7736129Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/awt_bridge.c:120:109: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'jint' (aka 'int') [-Wint-conversion]
+2026-10-02T15:38:23.7737324Z C/C++:     (*runtimeJNIEnvPtr_GRAPHICS)->ReleaseIntArrayElements(runtimeJNIEnvPtr_GRAPHICS, jreRgbArray, rgbArray, NULL);
+2026-10-02T15:38:23.7737951Z C/C++:                                                                                                             ^~~~
+2026-10-02T15:38:23.7738713Z C/C++: /usr/local/lib/android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.7/include/stddef.h:89:16: note: expanded from macro 'NULL'
+2026-10-02T15:38:23.7739408Z C/C++: #  define NULL ((void*)0)
+2026-10-02T15:38:23.7739657Z C/C++:                ^~~~~~~~~~
+2026-10-02T15:38:23.7739892Z C/C++: 1 warning generated.
+2026-10-02T15:38:29.7613420Z 
+2026-10-02T15:38:29.7614921Z > Task :ZalithLauncher:configureNdkBuildDebug[x86_64]
+2026-10-02T15:38:31.2641918Z 
+2026-10-02T15:38:31.2664883Z > Task :ZalithLauncher:buildNdkBuildDebug[x86_64]
+2026-10-02T15:38:31.2680271Z C/C++: rm: cannot remove '/home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/../jniLibs/*/libawt_headless.so': No such file or directory
+2026-10-02T15:38:31.2682915Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/gl_bridge.c:104:65: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2685259Z C/C++:         if (!bindResult) printf("EGLBridge: bind failed: %p\n", eglGetError_p());
+2026-10-02T15:38:31.2686351Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2687918Z C/C++:                                                          %d
+2026-10-02T15:38:31.2688679Z C/C++: 1 warning generated.
+2026-10-02T15:38:31.2690403Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/swap_interval_no_egl.c:236:29: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+2026-10-02T15:38:31.2692500Z C/C++:                             sizeof(struct ANativeWindow_real), nativeWindowReal->common.version);
+2026-10-02T15:38:31.2693470Z C/C++:                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2694434Z C/C++: 1 warning generated.
+2026-10-02T15:38:31.2698848Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:35:71: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2701007Z C/C++:             printf("EGLBridge: Error: eglMakeCurrent() failed: %p\n", eglGetError_p());
+2026-10-02T15:38:31.2702081Z C/C++:                                                                ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2702918Z C/C++:                                                                %d
+2026-10-02T15:38:31.2705795Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:41:25: warning: passing 'const char *[5]' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:31.2708443Z C/C++:         vtest_main_p(3, (const char*[]){"vtest", "--no-loop-or-fork", "--use-gles", NULL, NULL});
+2026-10-02T15:38:31.2709561Z C/C++:                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2711369Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:45:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+2026-10-02T15:38:31.2713010Z C/C++: }
+2026-10-02T15:38:31.2713483Z C/C++: ^
+2026-10-02T15:38:31.2715290Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:77:76: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2717300Z C/C++:             printf("EGLBridge: Error eglGetDefaultDisplay() failed: %p\n", eglGetError_p());
+2026-10-02T15:38:31.2718368Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2719205Z C/C++:                                                                     %d
+2026-10-02T15:38:31.2720951Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:85:65: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2722867Z C/C++:         printf("EGLBridge: Error eglInitialize() failed: %s\n", eglGetError_p());
+2026-10-02T15:38:31.2724083Z C/C++:                                                          ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2724914Z C/C++:                                                          %d
+2026-10-02T15:38:31.2726694Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:105:76: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2728732Z C/C++:         printf("EGLBridge: Error couldn't get an EGL visual config: %s\n", eglGetError_p());
+2026-10-02T15:38:31.2729807Z C/C++:                                                                     ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2730662Z C/C++:                                                                     %d
+2026-10-02T15:38:31.2732431Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:114:70: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2734984Z C/C++:         printf("EGLBridge: Error eglGetConfigAttrib() failed: %s\n", eglGetError_p());
+2026-10-02T15:38:31.2736156Z C/C++:                                                               ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2737018Z C/C++:                                                               %d
+2026-10-02T15:38:31.2738795Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/ctxbridges/virgl_bridge.c:126:72: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+2026-10-02T15:38:31.2740812Z C/C++:         printf("EGLBridge: Error eglCreateWindowSurface failed: %p\n", eglGetError_p());
+2026-10-02T15:38:31.2741873Z C/C++:                                                                 ~~     ^~~~~~~~~~~~~~~
+2026-10-02T15:38:31.2742683Z C/C++:                                                                 %d
+2026-10-02T15:38:31.2743420Z C/C++: 8 warnings generated.
+2026-10-02T15:38:31.2745299Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/jre_launcher.c:118:69: warning: format specifies type 'int' but the argument has type 'size_t' (aka 'unsigned long') [-Wformat]
+2026-10-02T15:38:31.2747521Z C/C++:             printf("Failed to set signal hander for signal %i: %s", i, strerror(errno));
+2026-10-02T15:38:31.2748561Z C/C++:                                                            ~~       ^
+2026-10-02T15:38:31.2749360Z C/C++:                                                            %zu
+2026-10-02T15:38:31.2760807Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/jre_launcher.c:190:37: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:31.2762967Z C/C++:     free_char_array(env, argsArray, argv);
+2026-10-02T15:38:31.2763956Z C/C++:                                     ^~~~
+2026-10-02T15:38:31.2765310Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.h:11:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:38:31.2766961Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray);
+2026-10-02T15:38:31.2768003Z C/C++:                                                                           ^
+2026-10-02T15:38:31.2768742Z C/C++: 2 warnings generated.
+2026-10-02T15:38:31.2770512Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:103:33: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:31.2772428Z C/C++:         android_update_LD_LIBRARY_PATH(ldLibPathUtf);
+2026-10-02T15:38:31.2773225Z C/C++:                                        ^~~~~~~~~~~~
+2026-10-02T15:38:31.2775486Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:156:32: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+2026-10-02T15:38:31.2777594Z C/C++:         free_char_array(env, cmdArgs, cmd_args_c);
+2026-10-02T15:38:31.2778334Z C/C++:                                       ^~~~~~~~~~
+2026-10-02T15:38:31.2779860Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/utils.c:41:75: note: passing argument to parameter 'charArray' here
+2026-10-02T15:38:31.2781687Z C/C++: void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray) {
+2026-10-02T15:38:31.2782723Z C/C++:                                                                           ^
+2026-10-02T15:38:31.2783455Z C/C++: 2 warnings generated.
+2026-10-02T15:38:31.2785445Z C/C++: /home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/jni/awt_bridge.c:120:109: warning: incompatible pointer to integer conversion passing 'void *' to parameter of type 'jint' (aka 'int') [-Wint-conversion]
+2026-10-02T15:38:31.2788198Z C/C++:     (*runtimeJNIEnvPtr_GRAPHICS)->ReleaseIntArrayElements(runtimeJNIEnvPtr_GRAPHICS, jreRgbArray, rgbArray, NULL);
+2026-10-02T15:38:31.2789552Z C/C++:                                                                                                             ^~~~
+2026-10-02T15:38:31.2791095Z C/C++: /usr/local/lib/android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.7/include/stddef.h:89:16: note: expanded from macro 'NULL'
+2026-10-02T15:38:31.2792492Z C/C++: #  define NULL ((void*)0)
+2026-10-02T15:38:31.2793092Z C/C++:                ^~~~~~~~~~
+2026-10-02T15:38:31.2793925Z C/C++: 1 warning generated.
+2026-10-02T15:38:32.4635972Z 
+2026-10-02T15:38:32.4662836Z > Task :ZalithLauncher:mergeDebugJniLibFolders
+2026-10-02T15:38:32.7640440Z > Task :ZalithLauncher:validateSigningDebug
+2026-10-02T15:38:32.7695431Z > Task :ZalithLauncher:writeDebugAppMetadata
+2026-10-02T15:38:32.7784740Z > Task :ZalithLauncher:writeDebugSigningConfigVersions
+2026-10-02T15:38:34.4636753Z > Task :ZalithLauncher:mergeDebugNativeLibs
+2026-10-02T15:38:36.8612650Z > Task :ZalithLauncher:stripDebugDebugSymbols
+2026-10-02T15:38:53.7612944Z > Task :ZalithLauncher:compileDebugKotlin
+2026-10-02T15:38:55.4624977Z 
+2026-10-02T15:38:55.4655071Z e: file:///home/runner/work/ZalithLauncher/ZalithLauncher/ZalithLauncher/src/main/java/com/movtery/zalithlauncher/launch/LaunchArgs.kt:157:24 Unresolved reference 'AllSettings'.
+2026-10-02T15:38:55.4656525Z > Task :ZalithLauncher:compileDebugKotlin FAILED
+2026-10-02T15:38:55.5634350Z 
+2026-10-02T15:38:55.5635601Z [Incubating] Problems report is available at: file:///home/runner/work/ZalithLauncher/ZalithLauncher/build/reports/problems/problems-report.html
+2026-10-02T15:38:55.5701163Z FAILURE: Build failed with an exception.
+2026-10-02T15:38:55.5701665Z 
+2026-10-02T15:38:55.5724214Z 
+2026-10-02T15:38:55.5725038Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-10-02T15:38:55.5804863Z * What went wrong:
+2026-10-02T15:38:55.5805175Z 
+2026-10-02T15:38:55.5835197Z Execution failed for task ':ZalithLauncher:compileDebugKotlin'.
+2026-10-02T15:38:55.5836530Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-10-02T15:38:55.5855185Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2026-10-02T15:38:55.5856426Z    > Compilation error. See log for more details
+2026-10-02T15:38:55.5856820Z 
+2026-10-02T15:38:55.5856958Z * Try:
+2026-10-02T15:38:55.5857419Z > Run with --stacktrace option to get the stack trace.
+2026-10-02T15:38:55.5858108Z > Run with --info or --debug option to get more log output.
+2026-10-02T15:38:55.5858743Z > Run with --scan to get full insights.
+2026-10-02T15:38:55.5859308Z > Get more help at https://help.gradle.org.
+2026-10-02T15:38:55.5859710Z 
+2026-10-02T15:38:55.5859878Z BUILD FAILED in 2m 31s
+2026-10-02T15:38:55.5860135Z 
+2026-10-02T15:38:55.5861115Z For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-10-02T15:38:55.5884420Z 38 actionable tasks: 38 executed
+2026-10-02T15:38:56.1389039Z ##[error]Process completed with exit code 1.
+2026-10-02T15:38:56.1525633Z Post job cleanup.
+2026-10-02T15:38:56.3110039Z (node:3447) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-02T15:38:56.3111502Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-02T15:38:56.3341022Z Post job cleanup.
+2026-10-02T15:38:56.4368582Z [command]/usr/bin/git version
+2026-10-02T15:38:56.4433281Z git version 2.55.0
+2026-10-02T15:38:56.4474135Z Temporarily overriding HOME='/home/runner/work/_temp/73fded0f-1a37-4b44-957a-c10b4dafc9d7' before making global git config changes
+2026-10-02T15:38:56.4476494Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-02T15:38:56.4480868Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ZalithLauncher/ZalithLauncher
+2026-10-02T15:38:56.4583226Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-02T15:38:56.4667590Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-02T15:38:56.4989679Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-02T15:38:56.5026843Z http.https://github.com/.extraheader
+2026-10-02T15:38:56.5042094Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-02T15:38:56.5095348Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-02T15:38:56.5471751Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-02T15:38:56.5528353Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-02T15:38:56.5989499Z Cleaning up orphan processes
+2026-10-02T15:38:56.6358144Z Terminate orphan process: pid (2341) (java)
+2026-10-02T15:38:56.6383322Z Terminate orphan process: pid (3109) (java)
+2026-10-02T15:38:56.6402663Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
